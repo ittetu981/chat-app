@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'messages/index'
   root to: "messages#index"
   resources :users, pnly: [:edit, :update]
+  resources :rooms, only: [:new, :create]
 end
